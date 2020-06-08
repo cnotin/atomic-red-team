@@ -20,7 +20,7 @@ atomic_tests:
     process_id:
       description: PID of input_arguments
       type: Integer
-      default: (get-process spoolsv).id
+      default: (Start-Process notepad -PassThru).id
   dependency_executor_name: powershell
   dependencies:
     - description: |
