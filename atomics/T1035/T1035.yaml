@@ -28,6 +28,8 @@ atomic_tests:
       sc.exe create #{service_name} binPath= "#{executable_command}"
       sc.exe start #{service_name}
       sc.exe delete #{service_name}
+    cleanup_command: |
+      del C:\art-marker.txt >nul 2>&1
 
 - name: Use PsExec to execute a command on a remote host
   auto_generated_guid: 873106b7-cfed-454b-8680-fa9f6400431c
