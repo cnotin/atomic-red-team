@@ -25,7 +25,7 @@ atomic_tests:
     name: command_prompt
     elevation_required: true
     command: |
-      sc.exe create #{service_name} binPath= #{executable_command}
+      sc.exe create #{service_name} binPath= "#{executable_command}"
       sc.exe start #{service_name}
       sc.exe delete #{service_name}
 
