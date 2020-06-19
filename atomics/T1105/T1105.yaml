@@ -237,14 +237,14 @@ atomic_tests:
       description: Name of the created BITS job
       type: String
       default: qcxjb7
+    local_path:
+      description: Local path to place file
+      type: Path
+      default: '%temp%\Atomic-license.txt'
     remote_file:
       description: URL of file to copy
       type: Url
       default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/LICENSE.txt
-    local_path:
-      description: Local path to place file
-      type: Path
-      default: %temp%\Atomic-license.txt
   executor:
     name: command_prompt
     command: |
