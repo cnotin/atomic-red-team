@@ -326,7 +326,7 @@ atomic_tests:
     output_folder:
       description: Path where resulting dump should be placed
       type: Path
-      default: C:\Windows\Temp
+      default: C:\Windows\Temp\ntds_T1003
 
   dependencies:
     - description: |
@@ -340,7 +340,10 @@ atomic_tests:
     name: command_prompt
     elevation_required: true
     command: |
+      mkdir #{output_folder}
       ntdsutil "ac i ntds" "ifm" "create full #{output_folder}" q q
+    cleanup_command: |
+      rmdir /q /s #{output_folder}
 
 - name: Create Volume Shadow Copy with NTDS.dit
   auto_generated_guid: dcebead7-6c28-4b4b-bf3c-79deb1b1fc7f
