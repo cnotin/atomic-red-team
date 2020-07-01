@@ -43,7 +43,7 @@ atomic_tests:
     hta_url:
       description: URL to HTA file for execution
       type: string
-      default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1170/src/T1170.hta
+      default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/T1218.005/src/T1218.005.hta
     temp_file:
       description: temp_file location for hta
       type: string
